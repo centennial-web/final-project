@@ -138,6 +138,10 @@
     <Content Include="AboutAmerican.html" />
     <Content Include="aboutBrazil.html" />
     <Content Include="AmericanCusine.html" />
+    <Content Include="App_Themes\Main\login.css" />
+    <Content Include="App_Themes\reset.css" />
+    <Content Include="Content\videos\login-2.mp4" />
+    <Content Include="Content\videos\login-1.mp4" />
     <Content Include="Burger.aspx" />
     <Content Include="images\flagUSA.png" />
     <Content Include="images\fundoportugues.jpg" />
@@ -227,6 +231,7 @@
     <Content Include="Order.html" />
     <Content Include="BurgerIndex.html" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\Login2.aspx" />
     <Content Include="PortugueseCusine.html" />
     <Content Include="RestaurantNames.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -307,6 +312,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -326,7 +338,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="html\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
