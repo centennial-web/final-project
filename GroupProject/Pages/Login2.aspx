@@ -13,7 +13,6 @@
     <div class="fullscreen-bg">
         <video autoplay muted loop class="fullscreen-bg__video">
             <source src="../Content/videos/login-2.mp4" type="video/mp4" />
-            <%--<source src="../Content/videos/login-1.mp4" type="video/mp4" />--%>
         </video>
     </div>
 
