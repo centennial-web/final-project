@@ -18,11 +18,12 @@
 
     <div class="transparent-content">
         <form runat="server" class="login-container">
-            <span class="login-title">Login</span>
+            <span class="company-name">Easy Food Restaurants</span>
             <div class="login-group">
                 <label for="txtEmail" class="group-label">Email</label>
                 <asp:TextBox runat="server" ID="txtEmail" class="group-input" MaxLength="100" autofocus/>
             </div>
+
             <div class="login-group">
                 <label for="txtPassword" class="group-label">Password</label>
                 <asp:TextBox runat="server" ID="txtPassword" class="group-input" MaxLength="100" />
