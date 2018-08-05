@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="GroupProject.Pages.MasterPages.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/animations.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/Main/master.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="container">
+        <div class="top">
+            <div class="menu">
+                <img class="menu-item grow logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
+                <div class="menu-item grow">Restaurants</div>
+                <div class="menu-item grow">Cousines</div>
+                <div class="menu-item grow">About</div>
+                <div class="menu-item grow">Contact</div>
+                <div class="menu-item grow">Profile</div>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="content">
+                <div class="content-wrapper">
+                    <asp:ContentPlaceHolder ID="content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="footer">
+                <div class="title-wrapper">
+                    <span class="app-title">Easy Food Restaurants</span>
+                    <span class="app-subtitle">&copy; Copyleft 2018</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -5,9 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../App_Themes/reset.css" />
-    <link rel="stylesheet" type="text/css" href="../App_Themes/animations.css" />
-    <link rel="stylesheet" type="text/css" href="../App_Themes/Main/login.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/animations.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/Main/login.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
 </head>
 <body>

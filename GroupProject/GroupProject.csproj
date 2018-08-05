@@ -139,8 +139,13 @@
     <Content Include="aboutBrazil.html" />
     <Content Include="AmericanCusine.html" />
     <Content Include="App_Themes\animations.css" />
+    <Content Include="App_Themes\main.css" />
+    <Content Include="App_Themes\Main\master.css" />
+    <Content Include="App_Themes\Main\register.css" />
     <Content Include="App_Themes\Main\login.css" />
     <Content Include="App_Themes\reset.css" />
+    <Content Include="Content\img\dish-top.jpeg" />
+    <Content Include="Content\img\logo-transp.svg" />
     <Content Include="Content\videos\login-2.mp4" />
     <Content Include="Content\videos\login-1.mp4" />
     <Content Include="Burger.aspx" />
@@ -216,6 +221,8 @@
     <Content Include="images\logobrazil.png" />
     <Content Include="images\logoHamburger.png" />
     <Content Include="images\logorest02.png" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\brazil.jpg" />
     <Content Include="images\cart2Rose.png" />
@@ -314,12 +321,26 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterPages\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MasterPages\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -346,6 +367,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
     <Folder Include="html\" />
   </ItemGroup>
   <ItemGroup>

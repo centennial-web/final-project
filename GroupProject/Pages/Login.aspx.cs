@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,12 +12,6 @@ namespace GroupProject.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // User is logged in
-            if ((string)Session["email"] != "")
-            {
-               // Response.Redirect("../Default.aspx");
-            }
-
             txtEmail.Focus();
         }
 
@@ -50,7 +45,7 @@ namespace GroupProject.Pages
             // Do not hit database id we don't need
             if (lblEmailError.Text != "" || lblPasswordError.Text != "")
             {
-                Session["email"] = "";
+                //Session["email"] = "";
 
                 if (lblEmailError.Text != "")
                 {
@@ -74,11 +69,10 @@ namespace GroupProject.Pages
                 cmd.Parameters.AddWithValue("@Password", password);
                 if (((int)cmd.ExecuteScalar()) == 1)
                 {
-                    Session["email"] = email;
-                    Response.Redirect("../Default.aspx");
+                    FormsAuthentication.RedirectFromLoginPage(email, true);
                 } else
                 {
-                    Session["email"] = "";
+                    //Session["email"] = "";
                     lblEmailError.Text = "Email or password does not match";
                     txtEmail.Attributes["class"] = "group-input group-input-error";
                     lblPasswordError.Text = "";
