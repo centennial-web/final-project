@@ -11,7 +11,9 @@ namespace GroupProject.db
     {
         public static SqlConnection NewConnection()
         {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantDbAzure"].ConnectionString);
+            var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RestaurantDbAzure"].ConnectionString);
+            conn.Open();
+            return conn;
         }
     }
 }
