@@ -4,6 +4,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
     <div class="content">
-        Default
+        <div class="search-box">
+            <div class="search-title">
+                Search for Restaurants, Cousines, Foods
+            </div>
+            <div class="search-input">
+                <asp:TextBox ID="txtSearchTerm" runat="server"></asp:TextBox>
+            </div>
+        </div>
     </div>
 </asp:Content>
