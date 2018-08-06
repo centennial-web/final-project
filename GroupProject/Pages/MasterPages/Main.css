@@ -1,0 +1,119 @@
+﻿.master_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.master_top {
+    display: flex;
+    background-color: #388E3C;
+    justify-content: center;
+}
+
+.master_menu {
+    position: relative;
+    background-color: #689F38;
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    min-width: 1024px;
+}
+
+.master_menu-item {
+    display: flex;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.master_menu-item:hover {
+    background-color: #C2185B;
+}
+
+.master_sel {
+    background-color: #C2185B;
+}
+
+.master_logo {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.master_center {
+    display: flex;
+    justify-content: center;
+}
+
+.master_bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.master_content {
+    color: #212F3D;
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    background-color: #C8E6C9;
+}
+
+.master_content-wrapper {
+    /*padding: 20px;*/
+    width: 100%;
+}
+
+.master_footer {
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    background-color: #455A64;
+    color: white;
+}
+
+.master_title-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.master_app-title {
+    margin: 20px 0px 0px 20px;
+    color: white;
+    font-size: 0.8em;
+}
+
+.master_app-subtitle {
+    margin: 5px 0px 20px 20px;
+    color: white;
+    font-size: 0.6em;
+}
+
+.master_shopping-cart {
+    min-width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.master_badge {
+    position: absolute;
+    color: white;
+    font-size: 0.5em;
+    background-color: #C2185B;
+    border-radius: 25px;
+    max-width: 15px;
+    max-height: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+}
+
