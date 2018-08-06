@@ -48,17 +48,24 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    border: 0px;
+    min-height: 45px;
 
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
 }
 
-/*.search-input input:focus, textarea:focus {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-}*/
+
+.search-input input:focus, textarea:focus {
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
 
 .search-button {
     display: flex;
