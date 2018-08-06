@@ -142,6 +142,9 @@
     <Content Include="Content\img\generic-food-background-2.jpg" />
     <Content Include="Content\img\shopping-cart.svg" />
     <Content Include="Content\img\table-background.png" />
+    <Content Include="images\About1.PNG" />
+    <Content Include="images\About2.PNG" />
+    <Content Include="images\About3.PNG" />
     <Content Include="Pages\MasterPages\GlobalCss\3_anim.css" />
     <Content Include="Pages\MasterPages\GlobalCss\2_general.css" />
     <Content Include="Pages\MasterPages\Master.css" />
