@@ -43,11 +43,9 @@
     padding: 20px;
 }
 
-.company-name {
-    color: forestgreen;
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-bottom: 20px
+.logo {
+    margin-bottom: 20px;
+    align-self: center;
 }
 
 .login-group {
@@ -82,9 +80,9 @@
     font-size: 1em;
 }
 
-.button:hover {
-    background-color: #C2185B;
-}
+    .button:hover {
+        background-color: #C2185B;
+    }
 
 .button-register {
     background-color: #1F7001;
@@ -98,10 +96,10 @@
     align-self: flex-end;
 }
 
-.forgot-password:hover {
-    text-decoration: underline;
-    color: forestgreen;
-}
+    .forgot-password:hover {
+        text-decoration: underline;
+        color: forestgreen;
+    }
 
 .error {
     color: red;

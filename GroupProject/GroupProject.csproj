@@ -138,13 +138,17 @@
     <Content Include="AboutAmerican.html" />
     <Content Include="aboutBrazil.html" />
     <Content Include="AmericanCusine.html" />
-    <Content Include="App_Themes\animations.css" />
-    <Content Include="App_Themes\main.css" />
-    <Content Include="App_Themes\Main\master.css" />
-    <Content Include="App_Themes\Main\register.css" />
-    <Content Include="App_Themes\Main\login.css" />
-    <Content Include="App_Themes\reset.css" />
+    <Content Include="Pages\MasterPages\GlobalCss\3_anim.css" />
+    <Content Include="Pages\MasterPages\GlobalCss\2_general.css" />
+    <Content Include="Pages\MasterPages\Master.css" />
+    <Content Include="Pages\About.css" />
+    <Content Include="Pages\Contact.css" />
+    <Content Include="Pages\Cousines.css" />
+    <Content Include="Pages\Default.css" />
+    <Content Include="Pages\Login.css" />
+    <Content Include="Pages\MasterPages\GlobalCss\1_reset.css" />
     <Content Include="Content\img\dish-top.jpeg" />
+    <Content Include="Content\img\logo-green.svg" />
     <Content Include="Content\img\logo-transp.svg" />
     <Content Include="Content\img\shop-cart.svg" />
     <Content Include="Content\videos\login-2.mp4" />
@@ -227,7 +231,9 @@
     <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Cousines.aspx" />
     <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\MasterPages\LoginRegister.css" />
     <Content Include="Pages\MasterPages\Main.Master" />
+    <Content Include="Pages\MasterPages\LoginRegister.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\brazil.jpg" />
     <Content Include="images\cart2Rose.png" />
@@ -246,7 +252,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\Register.css" />
     <Content Include="Pages\Restaurants.aspx" />
+    <Content Include="Pages\Restaurants.css" />
     <Content Include="PortugueseCusine.html" />
     <Content Include="RestaurantNames.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -286,6 +294,7 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\CartService.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -309,7 +318,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="db\Connection.cs" />
+    <Compile Include="App_Code\Connection.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -361,6 +370,13 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterPages\LoginRegister.Master.cs">
+      <DependentUpon>LoginRegister.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MasterPages\LoginRegister.Master.designer.cs">
+      <DependentUpon>LoginRegister.Master</DependentUpon>
     </Compile>
     <Compile Include="Pages\MasterPages\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

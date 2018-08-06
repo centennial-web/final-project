@@ -60,23 +60,28 @@ namespace GroupProject.Pages
             }
 
             // Database
-            using (var cmd = db.Connection.NewConnection().CreateCommand())
+            using (var conn = db.Connection.New())
             {
-                // Never use unencrypted passwords. Always use hashes at least like md5, sha# or even better, bcrypt
-                cmd.CommandText = "Select Count(*) From Customers Where Email=@Email And Password=@Password";
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Password", password);
-                if (((int)cmd.ExecuteScalar()) == 1)
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
                 {
-                    FormsAuthentication.RedirectFromLoginPage(email, true);
-                } else
-                {
-                    //Session["email"] = "";
-                    lblEmailError.Text = "Email or password does not match";
-                    txtEmail.Attributes["class"] = "group-input group-input-error";
-                    lblPasswordError.Text = "";
-                    txtPassword.Attributes["class"] = "group-input";
+                    // Never use unencrypted passwords. Always use hashes at least like md5, sha# or even better, bcrypt
+                    cmd.CommandText = "Select Count(*) From Customers Where Email=@Email And Password=@Password";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    if (((int)cmd.ExecuteScalar()) == 1)
+                    {
+                        FormsAuthentication.RedirectFromLoginPage(email, true);
+                    }
+                    else
+                    {
+                        //Session["email"] = "";
+                        lblEmailError.Text = "Email or password does not match";
+                        txtEmail.Attributes["class"] = "group-input group-input-error";
+                        lblPasswordError.Text = "";
+                        txtPassword.Attributes["class"] = "group-input";
+                    }
                 }
             }
         }
