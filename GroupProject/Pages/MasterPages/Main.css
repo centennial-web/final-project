@@ -82,12 +82,15 @@
     margin: 20px 0px 0px 20px;
     color: white;
     font-size: 0.8em;
+    font-weight: 100;
 }
 
 .master_app-subtitle {
     margin: 5px 0px 20px 20px;
     color: white;
     font-size: 0.6em;
+    font-weight: 100;
+    letter-spacing: 0.05em;
 }
 
 .master_shopping-cart {

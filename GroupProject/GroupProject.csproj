@@ -140,6 +140,7 @@
     <Content Include="AmericanCusine.html" />
     <Content Include="Content\img\generic-food-background-1.jpg" />
     <Content Include="Content\img\generic-food-background-2.jpg" />
+    <Content Include="Content\img\generic-food-background-3.jpg" />
     <Content Include="Content\img\shopping-cart.svg" />
     <Content Include="Content\img\table-background.png" />
     <Content Include="images\About1.PNG" />
@@ -147,7 +148,7 @@
     <Content Include="images\About3.PNG" />
     <Content Include="Pages\MasterPages\GlobalCss\3_anim.css" />
     <Content Include="Pages\MasterPages\GlobalCss\2_general.css" />
-    <Content Include="Pages\MasterPages\Master.css" />
+    <Content Include="Pages\MasterPages\Main.css" />
     <Content Include="Pages\About.css" />
     <Content Include="Pages\Contact.css" />
     <Content Include="Pages\Cousines.css" />

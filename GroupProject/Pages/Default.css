@@ -1,15 +1,17 @@
 ﻿.content {
     display: flex;
-    flex-direction: column;
-    min-height: 600px;
     justify-content: center;
-    background-image: url("../Content/img/table-background-2.png");
+    min-height: 600px;
+    /*background-image: url("/Content/img/generic-food-background-3.jpg");*/
+    background-image: url("/Content/img/table-background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .search-box {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.6);
     max-width: 500px;
     min-width: 500px;
@@ -23,12 +25,62 @@
     color: white;
     font-weight: 100;
     font-size: 0.9em;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: 20px 20px 0px 20px;
+}
+
+.search-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .search-input {
-    margin: 20px;
+    margin: 20px 10px 20px 20px;
     width: 100%;
-    min-width: 100%;
+}
+
+.search-input input, textarea {
+    width: 100%;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0px;
+    min-height: 45px;
+
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+
+.search-input input:focus, textarea:focus {
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px 10px 10px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    background-color: #689F38;
+    font-weight: 100;
+    min-height: 25px;
+    min-width: 80px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: #C2185B;
 }

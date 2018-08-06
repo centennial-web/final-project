@@ -8,8 +8,13 @@
             <div class="search-title">
                 Search for Restaurants, Cousines, Foods
             </div>
-            <div class="search-input">
-                <asp:TextBox ID="txtSearchTerm" runat="server"></asp:TextBox>
+            <div class="search-group">
+                <div class="search-input">
+                    <asp:TextBox ID="txtSearchTerm" runat="server" TextMode="Search" autofocus></asp:TextBox>
+                </div>
+                <div class="search-button grow">
+                    Search
+                </div>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/2_general.css" />
     <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/3_anim.css" />
     <%--This page CSS--%>
-    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/Master.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/Main.css" />
     
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

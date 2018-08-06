@@ -80,9 +80,9 @@
     font-size: 1em;
 }
 
-    .button:hover {
-        background-color: #C2185B;
-    }
+.button:hover {
+    background-color: #C2185B;
+}
 
 .button-register {
     background-color: #1F7001;
