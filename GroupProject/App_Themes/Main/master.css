@@ -10,6 +10,7 @@
 }
 
 .menu {
+    position: relative;
     background-color: #689F38;
     display: flex;
     justify-content: center;
@@ -86,4 +87,31 @@
     margin: 5px 0px 20px 20px;
     color: white;
     font-size: 0.6em;
+}
+
+.shopping-cart {
+    min-width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    color: white;
+    font-size: 0.5em;
+    background-color: #C2185B;
+    border-radius: 25px;
+    max-width: 15px;
+    max-height: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
 }

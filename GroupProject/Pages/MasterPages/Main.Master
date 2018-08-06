@@ -5,10 +5,10 @@
 <html>
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="~/App_Themes/reset.css" />
-    <link rel="stylesheet" type="text/css" href="~/App_Themes/animations.css" />
-    <link rel="stylesheet" type="text/css" href="~/App_Themes/main.css" />
-    <link rel="stylesheet" type="text/css" href="~/App_Themes/Main/master.css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/animations.css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/main.css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/Main/master.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -17,14 +17,18 @@
     <form id="form1" runat="server" class="container">
         <div class="top">
             <div class="menu">
-                <img class="menu-item grow logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
-                <div class="menu-item grow">Restaurants</div>
-                <div class="menu-item grow">Cousines</div>
-                <div class="menu-item grow">Contact</div>
-                <div class="menu-item grow">About</div>
+                <a href="/Pages/Default.aspx">
+                    <img class="menu-item grow logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
+                </a>
+                <a href="/Pages/Restaurants.aspx" class="menu-item grow">Restaurants</a>
+                <a href="/Pages/Cousines.aspx" class="menu-item grow">Cousines</a>
+                <a href="/Pages/Contact.aspx" class="menu-item grow">Contact</a>
+                <a href="/Pages/About.aspx" class="menu-item grow">About</a>
                 <% if (Context.User.Identity.IsAuthenticated) { %>
                     <asp:LinkButton CssClass="menu-item grow" ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
                 <%} %>
+                <img src="/Content/img/shopping-cart.svg" alt="Shopping Cart" class="shopping-cart grow" />
+                <div class="badge">1</div>
             </div>
         </div>
 

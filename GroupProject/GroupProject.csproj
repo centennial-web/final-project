@@ -146,9 +146,11 @@
     <Content Include="App_Themes\reset.css" />
     <Content Include="Content\img\dish-top.jpeg" />
     <Content Include="Content\img\logo-transp.svg" />
+    <Content Include="Content\img\shop-cart.svg" />
     <Content Include="Content\videos\login-2.mp4" />
     <Content Include="Content\videos\login-1.mp4" />
     <Content Include="Burger.aspx" />
+    <Content Include="db_scripts\00 - Creation.sql" />
     <Content Include="images\flagUSA.png" />
     <Content Include="images\fundoportugues.jpg" />
     <Content Include="MenuBrazil.html" />
@@ -221,6 +223,9 @@
     <Content Include="images\logobrazil.png" />
     <Content Include="images\logoHamburger.png" />
     <Content Include="images\logorest02.png" />
+    <Content Include="Pages\About.aspx" />
+    <Content Include="Pages\Contact.aspx" />
+    <Content Include="Pages\Cousines.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -241,6 +246,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\Restaurants.aspx" />
     <Content Include="PortugueseCusine.html" />
     <Content Include="RestaurantNames.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -321,6 +327,27 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cousines.aspx.cs">
+      <DependentUpon>Cousines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cousines.aspx.designer.cs">
+      <DependentUpon>Cousines.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -348,6 +375,13 @@
     </Compile>
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Restaurants.aspx.cs">
+      <DependentUpon>Restaurants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Restaurants.aspx.designer.cs">
+      <DependentUpon>Restaurants.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
