@@ -1,7 +1,7 @@
 ﻿.content {
     display: flex;
     justify-content: center;
-    min-height: 600px;
+    min-height: 500px;
     /*background-image: url("/Content/img/generic-food-background-3.jpg");*/
     background-image: url("/Content/img/table-background.png");
     background-position: center;
