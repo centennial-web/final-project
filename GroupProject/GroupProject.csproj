@@ -259,6 +259,7 @@
     <Content Include="BurgerIndex.html" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Payment.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\Register.css" />
     <Content Include="Pages\ShoppingCart.css" />
@@ -394,6 +395,13 @@
     </Compile>
     <Compile Include="Pages\MasterPages\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
