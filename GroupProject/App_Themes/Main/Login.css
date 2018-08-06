@@ -70,16 +70,20 @@
 }
 
 .button {
+    font-weight: 100;
     border-width: 0px;
     padding: 15px 20px 15px 20px;
     color: white;
     background-color: forestgreen;
     margin: 10px 5px 10px 5px;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    text-transform: uppercase;
     cursor: pointer;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #C2185B;
 }
 
 .button-register {

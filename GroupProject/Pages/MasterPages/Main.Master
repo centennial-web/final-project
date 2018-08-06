@@ -20,9 +20,11 @@
                 <img class="menu-item grow logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
                 <div class="menu-item grow">Restaurants</div>
                 <div class="menu-item grow">Cousines</div>
-                <div class="menu-item grow">About</div>
                 <div class="menu-item grow">Contact</div>
-                <div class="menu-item grow">Profile</div>
+                <div class="menu-item grow">About</div>
+                <% if (Context.User.Identity.IsAuthenticated) { %>
+                    <asp:LinkButton CssClass="menu-item grow" ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                <%} %>
             </div>
         </div>
 
