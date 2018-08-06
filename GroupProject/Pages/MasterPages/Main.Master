@@ -62,6 +62,11 @@
                     <span class="master_app-title">Easy Food Restaurants</span>
                     <span class="master_app-subtitle">&copy; Copyleft <%: DateTime.Now.Year %></span>
                 </div>
+                <div class="master_footer-address">
+                    <div>10-5000 Main Street</div>
+                    <div>Toronto, ON M3B 2W6</div>
+                    <div>Phone: (403) 617-0411</div>
+                </div>
             </div>
         </div>
     </form>
