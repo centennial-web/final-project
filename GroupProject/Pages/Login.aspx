@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Easy Foods - Login" Language="C#" MasterPageFile="~/Pages/MasterPages/LoginRegister.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="GroupProject.Pages.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="~/Pages/Login.css" />
+    <link rel="stylesheet" type="text/css" href="Login.css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">

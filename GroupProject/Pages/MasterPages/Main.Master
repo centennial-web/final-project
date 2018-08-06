@@ -8,55 +8,59 @@
     <%--Fonts--%>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet" />
     <%--Global and must have CSSs--%>
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/1_reset.css" />
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/2_general.css" />
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/3_anim.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/1_reset.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/2_general.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/3_anim.css" />
     <%--This page CSS--%>
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/Master.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/Master.css" />
     
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server" class="container">
-        <div class="top">
-            <div class="menu">
+    <form id="form1" runat="server" class="master_container">
+        <div class="master_top">
+            <div class="master_menu">
                 <%--Logo--%>
                 <a href="/Pages/Default.aspx">
-                    <img class="menu-item grow logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
+                    <img class="master_menu-item grow master_logo" src="/Content/img/logo-transp.svg" alt="Easy Food" />
                 </a>
                 
                 <%--Menu links--%>
-                <a href="/Pages/Restaurants.aspx" class="menu-item grow">Restaurants</a>
-                <a href="/Pages/Cousines.aspx" class="menu-item grow">Cousines</a>
-                <a href="/Pages/Contact.aspx" class="menu-item grow">Contact</a>
-                <a href="/Pages/About.aspx" class="menu-item grow">About</a>
+                <a href="/Pages/Restaurants.aspx" class="master_menu-item grow">Restaurants</a>
+                <a href="/Pages/Cousines.aspx" class="master_menu-item grow">Cousines</a>
+                <a href="/Pages/Contact.aspx" class="master_menu-item grow">Contact</a>
+                <a href="/Pages/About.aspx" class="master_menu-item grow">About</a>
                 
                 <%--Logout link only visible if user is logged in--%>
                 <% if (Context.User.Identity.IsAuthenticated) { %>
-                    <asp:LinkButton CssClass="menu-item grow" ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                    <asp:LinkButton CssClass="master_menu-item grow" ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">
+                        Logout
+                    </asp:LinkButton>
                 <%} %>
 
                 <%--Shopping cart--%>
-                <img src="/Content/img/shopping-cart.svg" alt="Shopping Cart" class="shopping-cart grow" />
-                <div class="badge">1</div>
+                <a href="/Pages/ShoppingCart.aspx">
+                    <img src="/Content/img/shopping-cart.svg" alt="Shopping Cart" class="master_shopping-cart grow" />
+                    <div class="master_badge">1</div>
+                </a>
             </div>
         </div>
 
-        <div class="center">
-            <div class="content">
-                <div class="content-wrapper">
+        <div class="master_center">
+            <div class="master_content">
+                <div class="master_content-wrapper">
                     <asp:ContentPlaceHolder ID="content" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
 
-        <div class="bottom">
-            <div class="footer">
-                <div class="title-wrapper">
-                    <span class="app-title">Easy Food Restaurants</span>
-                    <span class="app-subtitle">&copy; Copyleft 2018</span>
+        <div class="master_bottom">
+            <div class="master_footer">
+                <div class="master_title-wrapper">
+                    <span class="master_app-title">Easy Food Restaurants</span>
+                    <span class="master_app-subtitle">&copy; Copyleft <%: DateTime.Now.Year %></span>
                 </div>
             </div>
         </div>
