@@ -13,5 +13,20 @@ namespace GroupProject.Pages
         {
 
         }
+
+        protected void btnContact_Submit_Click(object sender, EventArgs e)
+        {
+
+            //Variables 
+            string name = txtContact_Name.Text;
+            string email = txt_ContactEmail.Text;
+            int phone = Convert.ToInt32(txtContact_Phone.Text);
+            string subject = txtContact_Subject.Text;
+            string message = txt_ContactMessage.Text;
+
+
+
+
+        }
     }
 }
