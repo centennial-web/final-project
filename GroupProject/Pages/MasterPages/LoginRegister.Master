@@ -9,11 +9,11 @@
     <%--Fonts--%>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet" />
     <%--Global and must have CSSs--%>
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/1_reset.css" />
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/2_general.css" />
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/GlobalCss/3_anim.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/1_reset.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/2_general.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/GlobalCss/3_anim.css" />
     <%--This page CSS--%>
-    <link rel="stylesheet" type="text/css" href="~/Pages/MasterPages/LoginRegister.css" />
+    <link rel="stylesheet" type="text/css" href="/Pages/MasterPages/LoginRegister.css" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -21,7 +21,7 @@
 <body>
     <div class="fullscreen-bg">
         <video autoplay="autoplay" muted="muted" loop="loop" class="fullscreen-bg__video">
-            <source src="../Content/videos/login-2.mp4" type="video/mp4" />
+            <source src="/Content/videos/login-2.mp4" type="video/mp4" />
         </video>
     </div>
 
