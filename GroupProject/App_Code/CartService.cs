@@ -7,6 +7,14 @@ namespace GroupProject.App_Code
 {
     public class CartService
     {
+        //BRINGING DATA FROM ORDER PAGE TO THE CART
+        //String prodName = datalist1.text;
+        //String prodDescription = datalist.text;
+        //float price = datalist.text;
+       // int quantity = txtOrder_Qty.text;
+        //flot total = txtOrder_Total.text;
+
+
         public static int CartItemsCount(long customerId)
         {
             using (var conn = db.Connection.New())
@@ -24,5 +32,25 @@ namespace GroupProject.App_Code
                 }
             }
         }
+
+
+        //public static void AddItemsToCart()
+        //{
+
+        //    using (var conn = db.Connection.New())
+        //    {
+        //        conn.Open();
+        //        using (var cmd = conn.CreateCommand())
+        //        {
+
+        //            cmd.CommandText = @"Insert name, description, price into OrderItems where productId = lblProductId;
+        //        }
+        //    }
+
+        //}
+
     }
+
+
+
 }

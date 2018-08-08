@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="GroupProject.Pages.Menu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="GroupProject.Pages.Menu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -36,10 +36,12 @@
                 <td>
                     <br />
                     <br />
-                    <table style="width:100%;">
+                    <table style="width: 100%;">
                         <tr>
                             <td>&nbsp;</td>
-                            <td class="auto-style5">&nbsp;</td>
+                            <td class="auto-style5">
+                                <asp:Label ID="Label6" runat="server" Text="Prod Id"></asp:Label>
+                            </td>
                             <td class="auto-style1">
                                 <asp:Label ID="Label2" runat="server" Text="Meal"></asp:Label>
                             </td>
@@ -66,13 +68,13 @@
                                 </asp:DataList>
                             </td>
                             <td class="auto-style6">
-                                <asp:TextBox ID="TextBox1" runat="server" Width="64px"></asp:TextBox>
+                                <asp:TextBox ID="txtOrder_Qty" runat="server" Width="64px"></asp:TextBox>
                             </td>
                             <td class="auto-style3">
-                                <asp:TextBox ID="TextBox2" runat="server" Width="88px"></asp:TextBox>
+                                <asp:TextBox ID="txOder_Total" runat="server" Width="88px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:Button ID="btnMenu_AddtoCart" runat="server" Text="Add to Cart" />
+                                <asp:Button ID="btnMenu_AddtoCart" runat="server" OnClick="btnMenu_AddtoCart_Click" Text="Add to Cart" />
                             </td>
                         </tr>
                         <tr>
