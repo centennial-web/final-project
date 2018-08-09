@@ -42,7 +42,9 @@
                 <%--Shopping cart--%>
                 <a href="/Pages/ShoppingCart.aspx">
                     <img src="/Content/img/shopping-cart.svg" alt="Shopping Cart" class="master_shopping-cart grow" />
-                    <div class="master_badge">1</div>
+                    <asp:Panel ID="pnlBadge" CssClass="master_badge" runat="server">
+                        <asp:Label ID="lblBadge" Text="99" runat="server" />
+                    </asp:Panel>
                 </a>
             </div>
         </div>

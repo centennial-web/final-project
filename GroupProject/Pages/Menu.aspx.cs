@@ -22,25 +22,6 @@ namespace GroupProject.Pages
             }
         }
 
-        private void ShowRestauranteName()
-        {
-            var restaurantId = Request["RestaurantId"] ?? string.Empty;
-
-            using (var conn = db.Connection.New())
-            {
-                conn.Open();
-                using (var cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = "Select Name From Restaurants Where Id = " + restaurantId;
-                    object obj = cmd.ExecuteScalar();
-                    if (obj != null && obj != DBNull.Value)
-                    {
-                        lblRestaurante.Text = (string)obj + " Menu";
-                    }
-                }
-            }
-        }
-
         protected void ShowData()
         {
             using (SqlConnection conn = db.Connection.New())
@@ -75,6 +56,25 @@ namespace GroupProject.Pages
                         adapter.Fill(dataTable);
                         rptProducts.DataSource = dataTable;
                         rptProducts.DataBind();
+                    }
+                }
+            }
+        }
+
+        private void ShowRestauranteName()
+        {
+            var restaurantId = Request["RestaurantId"] ?? string.Empty;
+
+            using (var conn = db.Connection.New())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "Select Name From Restaurants Where Id = " + restaurantId;
+                    object obj = cmd.ExecuteScalar();
+                    if (obj != null && obj != DBNull.Value)
+                    {
+                        lblRestaurante.Text = (string)obj + " Menu";
                     }
                 }
             }

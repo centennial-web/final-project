@@ -312,7 +312,6 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\CartService.cs" />
     <Content Include="App_Code\OrderItems.cs" />
     <Content Include="App_Code\CardInfo.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -457,8 +456,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="code\" />
     <Folder Include="Content\css\" />
     <Folder Include="html\" />
   </ItemGroup>

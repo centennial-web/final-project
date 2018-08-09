@@ -22,7 +22,7 @@
                     <tbody>
             </HeaderTemplate>
             <ItemTemplate>
-                    <tr onclick="OpenMenu(<%#Eval("Id")%>);">
+                    <tr onclick="AddToCart(<%#Eval("Id")%>);">
                         <td>
                             <%#Eval("Name")%>
                         </td>
@@ -43,4 +43,12 @@
             </FooterTemplate>
         </asp:Repeater>
     </div>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script type="text/javascript">
+        function AddToCart(productId) {
+            window.location = "/Pages/ShoppingCart.aspx?ProductId=" + productId;
+        }
+    </script>    
 </asp:Content>

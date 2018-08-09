@@ -40,6 +40,24 @@ namespace GroupProject.Pages.MasterPages {
         protected global::System.Web.UI.WebControls.LinkButton lnkLogout;
         
         /// <summary>
+        /// pnlBadge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBadge;
+        
+        /// <summary>
+        /// lblBadge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBadge;
+        
+        /// <summary>
         /// content control.
         /// </summary>
         /// <remarks>

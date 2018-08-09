@@ -53,8 +53,8 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
     <script type="text/javascript">
-        function OpenMenu(RestaurantId) {
-            window.location = "/Pages/Menu.aspx?RestaurantId=" + RestaurantId;
+        function OpenMenu(restaurantId) {
+            window.location = "/Pages/Menu.aspx?RestaurantId=" + restaurantId;
         }
     </script>    
 </asp:Content>
