@@ -261,7 +261,7 @@
     <Content Include="BurgerIndex.html" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\Login.aspx" />
-    <Content Include="Pages\Order.aspx" />
+    <Content Include="Pages\Menu.aspx" />
     <Content Include="Pages\Payment.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\Register.css" />
@@ -310,6 +310,7 @@
   <ItemGroup>
     <Content Include="App_Code\CartService.cs" />
     <Content Include="App_Code\OrderItems.cs" />
+    <Content Include="App_Code\CardInfo.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -400,12 +401,12 @@
     <Compile Include="Pages\MasterPages\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Pages\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Pages\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>

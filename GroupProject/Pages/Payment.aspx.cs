@@ -13,5 +13,10 @@ namespace GroupProject.Pages
         {
 
         }
+
+        protected void btnConfirmPayment_Click(object sender, EventArgs e)
+        {
+            lblOrderStatus.Text = "Your order was submitted";
+        }
     }
 }

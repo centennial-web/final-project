@@ -1,20 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="GroupProject.Pages.Menu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="GroupProject.Pages.Menu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
-            width: 369px;
-        }
-        .auto-style2 {
-            width: 229px;
-        }
-        .auto-style3 {
-            width: 126px;
-        }
-        .auto-style5 {
-            width: 110px;
-        }
-        .auto-style6 {
-            width: 92px;
+        .auto-style7 {
+            width: 675px;
         }
     </style>
 </asp:Content>
@@ -38,52 +26,33 @@
                     <br />
                     <table style="width: 100%;">
                         <tr>
-                            <td>&nbsp;</td>
-                            <td class="auto-style5">
-                                <asp:Label ID="Label6" runat="server" Text="Prod Id"></asp:Label>
-                            </td>
-                            <td class="auto-style1">
-                                <asp:Label ID="Label2" runat="server" Text="Meal"></asp:Label>
-                            </td>
-                            <td class="auto-style2">
-                                <asp:Label ID="Label3" runat="server" Text="Price"></asp:Label>
-                            </td>
-                            <td class="auto-style6">
-                                <asp:Label ID="Label4" runat="server" Text="Quantity"></asp:Label>
-                            </td>
-                            <td class="auto-style3">
-                                <asp:Label ID="Label5" runat="server" Text="Total"></asp:Label>
-                            </td>
+                            <td class="auto-style7">
+                                Product Details</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td class="auto-style5">&nbsp;</td>
-                            <td class="auto-style1">
-                                <asp:DataList ID="DataList1" runat="server">
+                            <td class="auto-style7">
+                                <asp:DataList ID="dtlMenu" runat="server" OnSelectedIndexChanged="dtlMenu_SelectedIndexChanged" Width="638px">
+                          
+                                    <ItemTemplate>
+                                        <br />
+                                        Product:
+                                        <asp:Label ID="Label2" runat="server"></asp:Label>
+                                        &nbsp;Description:
+                                        <asp:Label ID="Label3" runat="server"></asp:Label>
+                                        &nbsp; Price :
+                                        <asp:Label ID="Label4" runat="server"></asp:Label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnAddToCart" runat="server" OnClick="Button1_Click" OnCommand="AddToCart" Text="Add to Cart" />
+                                    </ItemTemplate>
+                          
                                 </asp:DataList>
-                            </td>
-                            <td class="auto-style2">
-                                <asp:DataList ID="DataList2" runat="server">
-                                </asp:DataList>
-                            </td>
-                            <td class="auto-style6">
-                                <asp:TextBox ID="txtOrder_Qty" runat="server" Width="64px"></asp:TextBox>
-                            </td>
-                            <td class="auto-style3">
-                                <asp:TextBox ID="txOder_Total" runat="server" Width="88px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:Button ID="btnMenu_AddtoCart" runat="server" OnClick="btnMenu_AddtoCart_Click" Text="Add to Cart" />
-                            </td>
+                                &nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td class="auto-style5">&nbsp;</td>
-                            <td class="auto-style1">&nbsp;</td>
-                            <td class="auto-style2">&nbsp;</td>
-                            <td class="auto-style6">&nbsp;</td>
-                            <td class="auto-style3">&nbsp;</td>
+                            <td class="auto-style7">&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                     </table>

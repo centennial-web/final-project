@@ -7,19 +7,17 @@ namespace GroupProject.App_Code
 {
     public class OrderItems
     {
-        //string prodId = txtProdID.text;
-        //string prodName =  AQUI TEM QUE TRAZER O DATALIST QUE ESTA NA PAG ORDERS
-        //string prodDescrip = 
-        //    string price =
-        //    string qty =
-        //    string total =
+        string prod_Id ;
+        string prod_Name ;
+        string prod_Descrip ; 
+        float price ;
 
-        public OrderItems(string prodId, string prodName, string prodDesc, string qty, string price, string total)
+        public OrderItems(string prod_Id, string prod_Name, string prod_Descrip, float price)
         {
-            
-
+            this.prod_Id = prod_Id;
+            this.prod_Name = prod_Name;
+            this.prod_Descrip = prod_Descrip;
+            this.price = price;
         }
-        
-
     }
 }

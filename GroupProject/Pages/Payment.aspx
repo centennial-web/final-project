@@ -54,6 +54,11 @@
         .auto-style28 {
             margin-left: 141;
         }
+        .auto-style29 {
+            /*padding: 20px;*/
+        width: 100%;
+            height: 269px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
@@ -62,10 +67,10 @@
     <p>
         <asp:Label ID="Label1" runat="server" Text="How would you like to pay?"></asp:Label>
     </p>
-    <asp:Panel ID="Panel2" runat="server" Height="46px">
-    </asp:Panel>
-    <asp:Panel ID="Panel1" runat="server" Height="316px">
-        <table class="master_content-wrapper">
+    <p>
+        &nbsp;</p>
+    <asp:Panel ID="Panel2" runat="server" Height="57px">
+        <table class="auto-style29">
             <tr>
                 <td class="auto-style22">
                     <asp:Label ID="Label2" runat="server" Text="Pay with debit or credit card"></asp:Label>
@@ -170,5 +175,14 @@
                 </td>
             </tr>
         </table>
+       
+           
+         <asp:Button ID="btnConfirmPayment" runat="server" Text="Confirm" Height="30px" OnClick="btnConfirmPayment_Click" Width="111px" />
+        <asp:Label ID="lblOrderStatus" runat="server"></asp:Label>
+    </asp:Panel>
+    <asp:Panel ID="Panel1" runat="server" Height="295px">
+        <br />
+       
+
     </asp:Panel>
 </asp:Content>

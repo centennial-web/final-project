@@ -17,7 +17,7 @@
         <br />
     </p>
     <asp:Panel ID="Panel2" runat="server" Height="251px">
-        <asp:DataList ID="DataList1" runat="server">
+        <asp:DataList ID="dtlShoppingList" runat="server">
         </asp:DataList>
         <br />
     </asp:Panel>
@@ -25,7 +25,7 @@
         <table style="width:100%;">
             <tr>
                 <td class="auto-style1">
-                    <asp:Button ID="btnProceedToCheckout" runat="server" Text="Proceed to Checkout" />
+                    <asp:Button ID="btnProceedToCheckout" runat="server" Text="Proceed to Checkout" OnClick="btnProceedToCheckout_Click" />
                 </td>
                 <td>
                     <asp:Button ID="btnReset" runat="server" Text="Reset" Width="107px" />

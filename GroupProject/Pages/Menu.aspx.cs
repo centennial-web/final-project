@@ -4,36 +4,58 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-
+using System.Data.SqlClient;
+using GroupProject.db;
+using System.Data;
 
 namespace GroupProject.Pages
 {
     public partial class Menu : System.Web.UI.Page
+         
+          
     {
+
+        SqlConnection cn = new SqlConnection(@" "); // INSERT CONNECTION INFO
+        SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Menu is gonna bring list of dishes related to a specific restaurant from db
 
-            // Menu is gonna bring data from database 
+            //Method will display data from db 
+            displayData();
 
         }
 
-        protected void btnMenu_AddtoCart_Click(object sender, EventArgs e)
+        public void displayData()
         {
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Product_id,Product_Name,Product_Desc, price FROM Product join product_price", cn);//Confirm table's name (produto) and RESTRITION WITH RESTAURANT NAME 
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dtlMenu.DataSource = ds;
+                dtlMenu.DataBind();
+            }
+            finally
+            {
 
-            //Bringing data displayed in the menu page
-            //String prodName = datalist1.text;
-            //String prodDescription = datalist.text;
-            //float price = datalist.text;
-            //int quantity = testqty.text;
-            //flot total = txtTotal.text;
+                cn.Close();
+            }
+        }
 
-            //Object OrderItens
 
-            //OrderItems orderItem = new OrderItems();
+        protected void dtlMenu_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            string id = ((Label)e.Item.FindControl("Label1")).Text;
+            string name = ((Label)e.Item.FindControl("Label2")).Text;
+            string description = ((Label)e.Item.FindControl("Label3")).Text;
+            string price = ((Label)e.Item.FindControl("Label4")).Text;
 
-            //CartService.AddItemsToCart();
+           // cmd = new SqlCommand("insert into OrderItems values ('{0}','{1}','{2}','{3}')",id,name,description,price);
+
 
         }
+
     }
 }
