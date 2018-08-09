@@ -4,7 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
     <div class="content">
-        <div class="title">Menu</div>
+        <div class="title">
+            <asp:Label ID="lblRestaurante" runat="server" />
+        </div>
 
         <asp:Repeater ID="rptProducts" runat="server">
             <HeaderTemplate>

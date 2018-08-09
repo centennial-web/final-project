@@ -14,9 +14,30 @@ namespace GroupProject.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ShowRestauranteName();
+
             if (!IsPostBack)
             {
                 ShowData();
+            }
+        }
+
+        private void ShowRestauranteName()
+        {
+            var restaurantId = Request["RestaurantId"] ?? string.Empty;
+
+            using (var conn = db.Connection.New())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "Select Name From Restaurants Where Id = " + restaurantId;
+                    object obj = cmd.ExecuteScalar();
+                    if (obj != null && obj != DBNull.Value)
+                    {
+                        lblRestaurante.Text = (string)obj + " Menu";
+                    }
+                }
             }
         }
 
@@ -28,7 +49,7 @@ namespace GroupProject.Pages
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
                     // Search term
-                    var term = Request["RestaurantId"] ?? string.Empty;
+                    var restaurantId = Request["RestaurantId"] ?? string.Empty;
 
                     cmd.CommandText = string.Format(
                                         @"Select 
@@ -46,7 +67,7 @@ namespace GroupProject.Pages
                                         Inner Join Categories C On (C.Id = P.CategoryId)
                                         Where P.RestaurantId = {0}
                                         Order by C.Name, P.Name"
-                                    , term);
+                                    , restaurantId);
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
