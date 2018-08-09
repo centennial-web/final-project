@@ -1,3 +1,39 @@
 ﻿.content {
     padding: 20px;
 }
+
+.title {
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #808080;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    color: black;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+tbody tr {
+    font-weight: 300;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #C2185B;
+    color: white;
+}
+
+table {
+    width: 100%;
+    background-color: #f1f1c1;
+}

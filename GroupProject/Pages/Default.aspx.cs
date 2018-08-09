@@ -13,5 +13,10 @@ namespace GroupProject.Pages
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pages/Restaurants.aspx?q=" + txtSearchTerm.Text);
+        }
     }
 }

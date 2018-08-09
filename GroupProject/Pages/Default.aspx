@@ -6,15 +6,13 @@
     <div class="content">
         <div class="search-box">
             <div class="search-title">
-                Search for Restaurants, Cousines, Foods
+                Search for Restaurants, Cuisines, Foods
             </div>
             <div class="search-group">
                 <div class="search-input">
                     <asp:TextBox ID="txtSearchTerm" runat="server" TextMode="Search" autofocus></asp:TextBox>
                 </div>
-                <div class="search-button grow">
-                    Search
-                </div>
+                <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="search-button grow" OnClick="btnSearch_Click"/>
             </div>
         </div>
     </div>

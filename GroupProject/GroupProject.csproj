@@ -245,6 +245,7 @@
     <Content Include="Pages\MasterPages\LoginRegister.css" />
     <Content Include="Pages\MasterPages\Main.Master" />
     <Content Include="Pages\MasterPages\LoginRegister.Master" />
+    <Content Include="App_Themes\Skin\Skin.skin" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\brazil.jpg" />
     <Content Include="images\cart2Rose.png" />
@@ -455,6 +456,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="code\" />
     <Folder Include="Content\css\" />
     <Folder Include="html\" />
   </ItemGroup>
