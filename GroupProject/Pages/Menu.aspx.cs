@@ -11,51 +11,52 @@ using System.Data;
 namespace GroupProject.Pages
 {
     public partial class Menu : System.Web.UI.Page
-         
-          
     {
-
-        SqlConnection cn = new SqlConnection(@" "); // INSERT CONNECTION INFO
-        SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Menu is gonna bring list of dishes related to a specific restaurant from db
-
-            //Method will display data from db 
-            displayData();
-
-        }
-
-        public void displayData()
-        {
-            try
+            if (!IsPostBack)
             {
-                cn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Product_id,Product_Name,Product_Desc, price FROM Product join product_price", cn);//Confirm table's name (produto) and RESTRITION WITH RESTAURANT NAME 
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                dtlMenu.DataSource = ds;
-                dtlMenu.DataBind();
-            }
-            finally
-            {
-
-                cn.Close();
+                ShowData();
             }
         }
 
-
-        protected void dtlMenu_ItemCommand(object source, DataListCommandEventArgs e)
+        protected void ShowData()
         {
-            string id = ((Label)e.Item.FindControl("Label1")).Text;
-            string name = ((Label)e.Item.FindControl("Label2")).Text;
-            string description = ((Label)e.Item.FindControl("Label3")).Text;
-            string price = ((Label)e.Item.FindControl("Label4")).Text;
+            using (SqlConnection conn = db.Connection.New())
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    // Search term
+                    var term = Request["RestaurantId"] ?? string.Empty;
 
-           // cmd = new SqlCommand("insert into OrderItems values ('{0}','{1}','{2}','{3}')",id,name,description,price);
+                    cmd.CommandText = string.Format(
+                                        @"Select 
+	                                        P.Id,
+	                                        P.RestaurantId,
+	                                        R.Name RestaurantName,
+	                                        C.Name Category,
+	                                        P.Name,
+	                                        P.Description,
+	                                        P.Price,
+	                                        P.DiscountValue,
+	                                        P.Active 
+                                        From Products P
+                                        Inner Join Restaurants R On (R.Id = P.RestaurantId)
+                                        Inner Join Categories C On (C.Id = P.CategoryId)
+                                        Where P.RestaurantId = {0}
+                                        Order by C.Name, P.Name"
+                                    , term);
 
-
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        rptProducts.DataSource = dataTable;
+                        rptProducts.DataBind();
+                    }
+                }
+            }
         }
-
     }
 }
