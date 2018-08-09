@@ -70,5 +70,8 @@
             </div>
         </div>
     </form>
+
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>

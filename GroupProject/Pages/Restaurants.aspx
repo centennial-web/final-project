@@ -22,29 +22,26 @@
                     <tbody>
             </HeaderTemplate>
             <ItemTemplate>
-                <tr>
-                    <td>
-                        <asp:HyperLink class="text"
-                            NavigateUrl='<%#"/Pages/Menu.aspx?RestaurantId="+Eval("Id")%>'
-                            Text='<%#Eval("Name")%>'
-                            runat="server" ID="hplName" NAME="hplName" />
-                    </td>
-                    <td>
-                        <%# Eval("Street") %>.
-                        <%# Eval("City") %>,
-                        <%# Eval("Province") %>
-                        <%# Eval("ZipCode") %>
-                    </td>
-                    <td>
-                        <%# string.Format("{0:(###) ###-####}", Convert.ToInt64(Eval("PhoneNumber"))) %>
-                    </td>
-                    <td>
-                        <%# (bool)Eval("Delivery") ? "Yes" : "No" %>
-                    </td>
-                    <td>
-                        <%# string.Format("{0:c2}", Eval("DeliveryValue")) %>
-                    </td>
-                </tr>
+                    <tr onclick="OpenMenu(<%#Eval("Id")%>);">
+                        <td>
+                            <%#Eval("Name")%>
+                        </td>
+                        <td>
+                            <%# Eval("Street") %>.
+                            <%# Eval("City") %>,
+                            <%# Eval("Province") %>
+                            <%# Eval("ZipCode") %>
+                        </td>
+                        <td>
+                            <%# string.Format("{0:(###) ###-####}", Convert.ToInt64(Eval("PhoneNumber"))) %>
+                        </td>
+                        <td>
+                            <%# (bool)Eval("Delivery") ? "Yes" : "No" %>
+                        </td>
+                        <td>
+                            <%# string.Format("{0:c2}", Eval("DeliveryValue")) %>
+                        </td>
+                    </tr>
             </ItemTemplate>
             <FooterTemplate>
                 </tbody>
@@ -52,4 +49,12 @@
             </FooterTemplate>
         </asp:Repeater>
     </div>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script type="text/javascript">
+        function OpenMenu(RestaurantId) {
+            window.location = "/Pages/Menu.aspx?RestaurantId=" + RestaurantId;
+        }
+    </script>    
 </asp:Content>
