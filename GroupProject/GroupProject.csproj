@@ -143,6 +143,7 @@
     <Content Include="Content\img\generic-food-background-3.jpg" />
     <Content Include="Content\img\shopping-cart.svg" />
     <Content Include="Content\img\table-background.png" />
+    <Content Include="db_scripts\01 - Insert data.sql" />
     <Content Include="images\About1.PNG" />
     <Content Include="images\About2.PNG" />
     <Content Include="images\About3.PNG" />
@@ -153,7 +154,7 @@
     <Content Include="Pages\MasterPages\Main.css" />
     <Content Include="Pages\About.css" />
     <Content Include="Pages\Contact.css" />
-    <Content Include="Pages\Cousines.css" />
+    <Content Include="Pages\Cuisines.css" />
     <Content Include="Pages\Default.css" />
     <Content Include="Pages\Login.css" />
     <Content Include="Pages\MasterPages\GlobalCss\1_reset.css" />
@@ -239,7 +240,7 @@
     <Content Include="images\logorest02.png" />
     <Content Include="Pages\About.aspx" />
     <Content Include="Pages\Contact.aspx" />
-    <Content Include="Pages\Cousines.aspx" />
+    <Content Include="Pages\Cuisines.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MasterPages\LoginRegister.css" />
     <Content Include="Pages\MasterPages\Main.Master" />
@@ -366,12 +367,12 @@
     <Compile Include="Pages\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Cousines.aspx.cs">
-      <DependentUpon>Cousines.aspx</DependentUpon>
+    <Compile Include="Pages\Cuisines.aspx.cs">
+      <DependentUpon>Cuisines.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Cousines.aspx.designer.cs">
-      <DependentUpon>Cousines.aspx</DependentUpon>
+    <Compile Include="Pages\Cuisines.aspx.designer.cs">
+      <DependentUpon>Cuisines.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

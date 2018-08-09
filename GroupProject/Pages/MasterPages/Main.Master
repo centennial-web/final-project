@@ -28,7 +28,7 @@
                 
                 <%--Menu links--%>
                 <a href="/Pages/Restaurants.aspx" class="master_menu-item grow">Restaurants</a>
-                <a href="/Pages/Cousines.aspx" class="master_menu-item grow">Cousines</a>
+                <a href="/Pages/Cuisines.aspx" class="master_menu-item grow">Cuisines</a>
                 <a href="/Pages/Contact.aspx" class="master_menu-item grow">Contact</a>
                 <a href="/Pages/About.aspx" class="master_menu-item grow">About</a>
                 
