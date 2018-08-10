@@ -4,4 +4,66 @@
 
 .restaurant {
     font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #808080;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    color: black;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+tbody tr {
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+tbody tr:hover {
+    /*background-color: #C2185B;
+    color: white;*/
+}
+
+table {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+
+.trash {
+    max-width: 25px;
+    text-align: center;
+}
+
+.trash td {
+    padding: 0px;
+}
+
+.summary {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.total {
+    font-size: 0.9em;
+    padding: 4px 0px 0px 0px;
+}
+
+.general {
+    font-weight: 600;
 }

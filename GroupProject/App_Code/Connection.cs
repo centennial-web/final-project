@@ -222,5 +222,20 @@ namespace GroupProject.db
                 }
             }
         }
+
+        public static void DeleteShoppingCartItem(long shoppingCartItemId)
+        {
+            using (var conn = New())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"Delete From ShoppingCartItems Where Id = @shoppingCartItemId";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@shoppingCartItemId", shoppingCartItemId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

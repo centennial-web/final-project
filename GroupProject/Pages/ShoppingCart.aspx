@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="GroupProject.Pages.ShoppingCart" %>
+﻿<%@ Page Title="" EnableEventValidation="true" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="GroupProject.Pages.ShoppingCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="ShoppingCart.css" />
 </asp:Content>
@@ -14,26 +14,36 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th>Quantity</th>
                             <th>Price</th>
                             <th>Discount</th>
+                            <th>Total</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
             </HeaderTemplate>
             <ItemTemplate>
-                    <tr onclick="AddToCart(<%#Eval("Id")%>);">
+                    <tr>
                         <td>
                             <%#Eval("Name")%>
                         </td>
                         <td>
-                            <%# Eval("Description") %>.
+                            <%# Eval("Quantity") %>.
                         </td>
                         <td>
                             <%# string.Format("{0:c2}", Eval("Price")) %>
                         </td>
                         <td>
-                            <%# string.Format("{0:c2}", Eval("DiscountValue")) %>
+                            <%# string.Format("{0:c2}", Eval("Discount")) %>
+                        </td>
+                        <td>
+                            <%# string.Format("{0:c2}", Eval("Total")) %>
+                        </td>
+                        <td>
+                            <asp:ImageButton ID="btnRemove" runat="server" 
+                                ImageUrl="/Content/img/trash.svg" 
+                                CssClass="trash grow" OnClick="btnRemove_Click" CommandArgument='<%#Eval("Id")%>' />
                         </td>
                     </tr>
             </ItemTemplate>
@@ -42,5 +52,17 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
+
+        <div class="summary">
+            <div class="total">
+                Total Items: <asp:Label ID="lblTotalItems" Text="$230.90" runat="server" />
+            </div>
+            <div class="total">
+                Discount: <asp:Label ID="lblTotalDiscount" Text="$30.90" runat="server" />
+            </div>
+            <div class="total general">
+                Total: <asp:Label ID="lblTotalGeneral" Text="$200.00" runat="server" />
+            </div>
+        </div>
     </div>
 </asp:Content>

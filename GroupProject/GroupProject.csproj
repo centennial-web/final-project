@@ -143,6 +143,7 @@
     <Content Include="Content\img\generic-food-background-3.jpg" />
     <Content Include="Content\img\shopping-cart.svg" />
     <Content Include="Content\img\table-background.png" />
+    <Content Include="Content\img\trash.svg" />
     <Content Include="db_scripts\01 - Insert data.sql" />
     <Content Include="db_scripts\02 - Insert data products.sql" />
     <Content Include="db_scripts\03 - Shopping cart discount.sql" />
