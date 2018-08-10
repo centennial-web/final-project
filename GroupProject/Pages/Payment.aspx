@@ -1,67 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="GroupProject.Pages.Payment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style4 {
-            width: 598px;
-            height: 16px;
-        }
-        .auto-style5 {
-            width: 259px;
-            height: 16px;
-        }
-        .auto-style9 {
-            width: 259px;
-        }
-        .auto-style12 {
-            height: 16px;
-            width: 252px;
-        }
-        .auto-style14 {
-            height: 16px;
-            width: 1247px;
-        }
-        .auto-style15 {
-            width: 1247px;
-        }
-        .auto-style17 {
-            width: 598px;
-            height: 38px;
-        }
-        .auto-style18 {
-            width: 259px;
-            height: 38px;
-        }
-        .auto-style19 {
-            width: 252px;
-            height: 38px;
-        }
-        .auto-style20 {
-            width: 1247px;
-            height: 38px;
-        }
-        .auto-style22 {
-            width: 598px;
-        }
-        .auto-style24 {
-            margin-left: 80px;
-        }
-        .auto-style26 {
-            margin-left: 100px;
-        }
-        .auto-style27 {
-            width: 252px;
-        }
-        .auto-style28 {
-            margin-left: 141;
-        }
-        .auto-style29 {
-            /*padding: 20px;*/
-        width: 100%;
-            height: 269px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="Payment.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
+    <div class="content">
     <p>
         &nbsp;</p>
     <p>
@@ -185,4 +127,5 @@
        
 
     </asp:Panel>
+        </div>
 </asp:Content>

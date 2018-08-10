@@ -270,6 +270,7 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Menu.aspx" />
     <Content Include="Pages\Payment.aspx" />
+    <Content Include="Pages\Payment.css" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\Register.css" />
     <Content Include="Pages\Menu.css" />

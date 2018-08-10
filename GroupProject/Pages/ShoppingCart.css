@@ -51,14 +51,6 @@ table {
     padding: 0px;
 }
 
-.summary {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 20px;
-    align-items: flex-end;
-}
-
 .total {
     font-size: 0.9em;
     padding: 4px 0px 0px 0px;
@@ -85,4 +77,33 @@ table {
 .minus {
     min-width: 20px;
     padding-left: 5px;
+}
+
+.footer {
+    display: flex;
+    margin-top: 0px;
+    justify-content: space-between;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;    
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.checkout {
+    background-color: #689F38;
+    padding: 10px 20px 10px 20px;
+    margin-top: 0px;
+    align-self: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.checkout:hover {
+    background-color: #C2185B;
 }

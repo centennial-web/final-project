@@ -40,7 +40,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
     <script type="text/javascript">
         function OpenRestaurants(cuisineId) {
-            window.location = "/Pages/Restaurants.aspx?id=" + cuisineId;
+            window.location = "/Pages/Restaurants.aspx?CuisineId=" + cuisineId;
         }
     </script>    
 </asp:Content>

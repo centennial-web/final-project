@@ -69,16 +69,21 @@
             </FooterTemplate>
         </asp:Repeater>
 
-        <div class="summary">
-            <div class="total">
-                Total Items: <asp:Label ID="lblTotalItems" Text="$230.90" runat="server" />
-            </div>
-            <div class="total">
-                Discount: <asp:Label ID="lblTotalDiscount" Text="$30.90" runat="server" />
-            </div>
-            <div class="total general">
-                Total: <asp:Label ID="lblTotalGeneral" Text="$200.00" runat="server" />
+        <div class="footer">
+            <asp:HyperLink CssClass="checkout" runat="server" ID="hplCheckout" NavigateUrl="/Pages/Payment.aspx">Checkout</asp:HyperLink>
+
+            <div class="summary">
+                <div class="total">
+                    Total Items: <asp:Label ID="lblTotalItems" Text="$230.90" runat="server" />
+                </div>
+                <div class="total">
+                    Discount: <asp:Label ID="lblTotalDiscount" Text="$30.90" runat="server" />
+                </div>
+                <div class="total general">
+                    Total: <asp:Label ID="lblTotalGeneral" Text="$200.00" runat="server" />
+                </div>
             </div>
         </div>
+
     </div>
 </asp:Content>

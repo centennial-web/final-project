@@ -48,7 +48,7 @@ namespace GroupProject.Pages
 
                 // Show shopping cart
                 long cartId = db.Connection.GetShoppingCart(customerId, out string restaurantName, out string paymentMethod);
-                lblRestaurant.Text = restaurantName + "Order";
+                lblRestaurant.Text = restaurantName + " Order";
                 GetShoppingCartItems(cartId, out decimal totalPrice, out decimal totalDiscount, out decimal total);
                 lblTotalItems.Text = string.Format("{0:c2}", totalPrice);
                 lblTotalDiscount.Text = string.Format("{0:c2}", totalDiscount);

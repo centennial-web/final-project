@@ -25,9 +25,12 @@ namespace GroupProject.Pages
                 {
                     // Search term
                     var term = Request["q"] ?? string.Empty;
+                    var cuisineId = Request["CuisineId"] ?? string.Empty;
 
-                    cmd.CommandText = string.Format(
-                                        @"Select
+                    if (cuisineId != string.Empty)
+                    {
+                        cmd.CommandText = string.Format(
+                                            @"Select
 	                                        R.Id, R.Name, R.PhoneNumber,
 	                                        R.Street, R.ZipCode, R.City,
 	                                        R.Province, R.Website, R.Delivery,
@@ -35,14 +38,35 @@ namespace GroupProject.Pages
                                         From Restaurants R
 	                                        Inner Join RestaurantCuisines RxC On (R.Id = RxC.RestaurantId)
 	                                        Inner Join Cuisines C On (Rxc.CousineId = C.Id)
-                                        Where R.Name Like '%{0}%' or C.Name Like '%{0}%'
+                                        Where RxC.CousineId = {0}
                                         Group By 
 	                                        R.Id, R.Name, R.PhoneNumber,
 	                                        R.Street, R.ZipCode, R.City,
 	                                        R.Province, R.Website, R.Delivery,
 	                                        R.DeliveryValue, R.Comments
                                         Order by R.Name"
-                                    , term);
+                                        , cuisineId);
+                    }
+                    else
+                    {
+                        cmd.CommandText = string.Format(
+                                            @"Select
+	                                            R.Id, R.Name, R.PhoneNumber,
+	                                            R.Street, R.ZipCode, R.City,
+	                                            R.Province, R.Website, R.Delivery,
+	                                            R.DeliveryValue, R.Comments
+                                            From Restaurants R
+	                                            Inner Join RestaurantCuisines RxC On (R.Id = RxC.RestaurantId)
+	                                            Inner Join Cuisines C On (Rxc.CousineId = C.Id)
+                                            Where R.Name Like '%{0}%' or C.Name Like '%{0}%'
+                                            Group By 
+	                                            R.Id, R.Name, R.PhoneNumber,
+	                                            R.Street, R.ZipCode, R.City,
+	                                            R.Province, R.Website, R.Delivery,
+	                                            R.DeliveryValue, R.Comments
+                                            Order by R.Name"
+                                        , term);
+                    }
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {

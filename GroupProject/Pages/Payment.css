@@ -1,9 +1,14 @@
-﻿.login-container {
-    width: 700px;
+﻿.content {
+    padding: 20px;
 }
 
 .auto-style4 {
     width: 598px;
+    height: 16px;
+}
+
+.auto-style5 {
+    width: 259px;
     height: 16px;
 }
 
@@ -30,6 +35,11 @@
     height: 38px;
 }
 
+.auto-style18 {
+    width: 259px;
+    height: 38px;
+}
+
 .auto-style19 {
     width: 252px;
     height: 38px;
@@ -44,29 +54,24 @@
     width: 598px;
 }
 
+.auto-style24 {
+    margin-left: 80px;
+}
+
+.auto-style26 {
+    margin-left: 100px;
+}
+
 .auto-style27 {
     width: 252px;
 }
 
 .auto-style28 {
-    width: 762px;
+    margin-left: 141;
 }
 
 .auto-style29 {
-    width: 762px;
-    height: 38px;
-}
-
-.auto-style30 {
-    width: 762px;
-    height: 16px;
-}
-
-.auto-style31 {
-    width: 189px;
-    margin-left: 17px;
-}
-
-.auto-style32 {
-    margin-left: 4px;
+    /*padding: 20px;*/
+    width: 100%;
+    height: 269px;
 }
