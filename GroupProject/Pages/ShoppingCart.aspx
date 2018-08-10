@@ -29,7 +29,21 @@
                             <%#Eval("Name")%>
                         </td>
                         <td>
-                            <%# Eval("Quantity") %>.
+                            <div class="op-container">
+                                <span class="quantity"><%# Eval("Quantity") %></span>
+
+                                <div class="plus">
+                                    <asp:ImageButton ID="imgBtnPlus" runat="server" 
+                                        ImageUrl="/Content/img/plus.svg" 
+                                        CssClass="grow" OnClick="imgBtnPlus_Click" CommandArgument='<%#Eval("Id")%>' />
+                                </div>
+
+                                <div class="minus">
+                                    <asp:ImageButton ID="imgBtnMinus" runat="server" 
+                                        ImageUrl="/Content/img/minus.svg" 
+                                        CssClass="grow" OnClick="imgBtnMinus_Click" CommandArgument='<%#Eval("Id")%>' />
+                                </div>
+                            </div>
                         </td>
                         <td>
                             <%# string.Format("{0:c2}", Eval("Price")) %>
@@ -41,9 +55,11 @@
                             <%# string.Format("{0:c2}", Eval("Total")) %>
                         </td>
                         <td>
-                            <asp:ImageButton ID="btnRemove" runat="server" 
-                                ImageUrl="/Content/img/trash.svg" 
-                                CssClass="trash grow" OnClick="btnRemove_Click" CommandArgument='<%#Eval("Id")%>' />
+                            <div class="trash">
+                                <asp:ImageButton ID="btnRemove" runat="server" 
+                                    ImageUrl="/Content/img/trash.svg" 
+                                    CssClass="grow" OnClick="btnRemove_Click" CommandArgument='<%#Eval("Id")%>' />
+                            </div>
                         </td>
                     </tr>
             </ItemTemplate>

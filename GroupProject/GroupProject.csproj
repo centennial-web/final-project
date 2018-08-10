@@ -141,6 +141,8 @@
     <Content Include="Content\img\generic-food-background-1.jpg" />
     <Content Include="Content\img\generic-food-background-2.jpg" />
     <Content Include="Content\img\generic-food-background-3.jpg" />
+    <Content Include="Content\img\minus.svg" />
+    <Content Include="Content\img\plus.svg" />
     <Content Include="Content\img\shopping-cart.svg" />
     <Content Include="Content\img\table-background.png" />
     <Content Include="Content\img\trash.svg" />

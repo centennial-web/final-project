@@ -90,8 +90,8 @@ namespace GroupProject.Pages
 
                         foreach (DataRow row in dataTable.Rows)
                         {
-                            totalPrice += Convert.ToDecimal(row["Price"]);
-                            totalDiscount += Convert.ToDecimal(row["Discount"]);
+                            totalPrice += Convert.ToDecimal(row["Price"]) * Convert.ToDecimal(row["Quantity"]);
+                            totalDiscount += Convert.ToDecimal(row["Discount"]) * Convert.ToDecimal(row["Quantity"]);
                             total += Convert.ToDecimal(row["Total"]);
                         }
 
@@ -109,6 +109,32 @@ namespace GroupProject.Pages
 
             // Delete
             db.Connection.DeleteShoppingCartItem(shoppingCartItemId);
+
+            // Reload
+            Response.Redirect("/Pages/ShoppingCart.aspx");
+            Response.End();
+        }
+
+        protected void imgBtnPlus_Click(object sender, ImageClickEventArgs e)
+        {
+            // Get id
+            long shoppingCartItemId = Convert.ToInt64(((ImageButton)sender).CommandArgument);
+
+            // Increment
+            db.Connection.IncrementItemToShoppingCart(shoppingCartItemId);
+
+            // Reload
+            Response.Redirect("/Pages/ShoppingCart.aspx");
+            Response.End();
+        }
+
+        protected void imgBtnMinus_Click(object sender, ImageClickEventArgs e)
+        {
+            // Get id
+            long shoppingCartItemId = Convert.ToInt64(((ImageButton)sender).CommandArgument);
+
+            // Increment
+            db.Connection.DecrementItemToShoppingCart(shoppingCartItemId);
 
             // Reload
             Response.Redirect("/Pages/ShoppingCart.aspx");

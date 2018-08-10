@@ -237,5 +237,69 @@ namespace GroupProject.db
                 }
             }
         }
+
+        public static void IncrementItemToShoppingCart(long shoppingCartItemId)
+        {
+            using (var conn = New())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"Update ShoppingCartItems Set Quantity=Quantity+1 Where Id=@shoppingCartItemId";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@shoppingCartItemId", shoppingCartItemId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void DecrementItemToShoppingCart(long shoppingCartItemId)
+        {
+            // Get quantity
+            int quantity;
+            using (var conn = New())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"Select Quantity From ShoppingCartItems Where Id=@shoppingCartItemId";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@shoppingCartItemId", shoppingCartItemId);
+                    quantity = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            // If quantity is zero we have to remove
+            if (quantity <= 1)
+            {
+                // Remove
+                using (var conn = New())
+                {
+                    conn.Open();
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        cmd.CommandText = @"Delete From ShoppingCartItems Where Id=@shoppingCartItemId";
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@shoppingCartItemId", shoppingCartItemId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            else
+            {
+                // Subtract
+                using (var conn = New())
+                {
+                    conn.Open();
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        cmd.CommandText = @"Update ShoppingCartItems Set Quantity=Quantity-1 Where Id=@shoppingCartItemId";
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@shoppingCartItemId", shoppingCartItemId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
     }
 }
