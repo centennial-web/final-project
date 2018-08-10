@@ -11,41 +11,42 @@ namespace GroupProject.Pages
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
-        SqlConnection cn = new SqlConnection(@" "); // INSERT CONNECTION INFO
-        SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
-            displayData();
-        }
+            // Get logged customer id
+            long customerId = db.Connection.GetCustomerIdByEmail(Context.User.Identity.Name) ?? 0;
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        public void displayData()
-        {
-            try
+            // Add product
+            var pid = Request["ProductId"];
+            if (pid != null)
             {
-                cn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Product_id,Product_Name,Product_Desc, price FROM Product join product_price", cn);//Confirm table's name (produto) and RESTRITION WITH RESTAURANT NAME 
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                dtlShoppingList.DataSource = ds;
-                dtlShoppingList.DataBind();
-            }
-            finally
-            {
+                var productId = Convert.ToInt64(pid);
 
-                cn.Close();
-            }
-        }
+                // Get restaurant Id by product id
+                long restaurantId = db.Connection.GetRestaurantIdByProductId(productId);
 
-        protected void btnProceedToCheckout_Click(object sender, EventArgs e)
-        {
-         
-            Response.Redirect("~/Payment.aspx");
+                // Inclusao do produto no shopping cart
+                if (!db.Connection.CartIsOpen(customerId, out long shoppingCartId))
+                {
+                    // Abre shopping cart
+                    shoppingCartId = db.Connection.OpenCart(customerId, restaurantId);
+                }
+
+                // Get product price and discount
+                db.Connection.GetProductPriceAndDiscount(productId, out decimal price, out decimal discount);
+
+                // Incluir produto
+                db.Connection.AddProductToCart(shoppingCartId, productId, 1, price, discount);
+
+                Response.Redirect("/Pages/Menu.aspx?RestaurantId=" + restaurantId);
+                Response.End();
+
+                return;
+            }
+
+            // Show shopping cart
+            long cartId = db.Connection.GetShoppingCart(customerId, out string restaurantName, out string paymentMethod);
+            lblRestaurant.Text = restaurantName;
         }
     }
 }

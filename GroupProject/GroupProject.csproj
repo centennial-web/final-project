@@ -145,6 +145,7 @@
     <Content Include="Content\img\table-background.png" />
     <Content Include="db_scripts\01 - Insert data.sql" />
     <Content Include="db_scripts\02 - Insert data products.sql" />
+    <Content Include="db_scripts\03 - Shopping cart discount.sql" />
     <Content Include="images\About1.PNG" />
     <Content Include="images\About2.PNG" />
     <Content Include="images\About3.PNG" />
